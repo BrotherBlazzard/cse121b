@@ -15,26 +15,32 @@
 </head>
 
 <body>
-  <nav>
-    <ul id="menu">
-      <li><a id="toggleMenu">&equiv;</a></li>
-      <li><a href="#" class="active">🏠</a></li>
-      <li><a href="hello.html">Lesson 1</a></li>
-      <li><a href="week2/task2.html">Lesson 2</a></li>
-      <li><a href="#">Lesson 3</a></li>
-      <li><a href="#">Lesson 4</a></li>
-    </ul>
-  </nav>
-  <header>
-    <h1>CSE 121B - JavaScript Programming</h1>
-    <h2>Brother Blazzard</h2>
-  </header>
-  <main></main>
-  <footer>
-    <p>&copy;<span id="year"></span> | Brother Blazzard | CSE 121B</p>
-    <p>Last Update: <span id="lastModified"></span></p>
-  </footer>
-
+  <div class="page">
+    <nav>
+      <ul id="menu">
+        <li><a id="toggleMenu">&equiv;</a></li>
+        <li><a href="#" class="active">🏠</a></li>
+        <li><a href="hello.html">L1</a></li>
+        <li><a href="week2/task2.html">L2</a></li>
+        <li><a href="#">L3</a></li>
+        <li><a href="#">L4</a></li>
+      </ul>
+    </nav>
+    <header>
+      <h1>CSE 121B - JavaScript Programming</h1>
+      <h2>Brother Blazzard</h2>
+    </header>
+    <main>
+      <picture>
+        <img src="images/blazzard.png" alt="">
+      </picture>
+    </main>
+    <footer>
+      <p>&copy;<span id="year"></span> | Brother Blazzard | CSE 121B</p>
+      <p>Last Update: <span id="lastModified"></span></p>
+      <p>Days left in the current semester: <span id="daysLeft"></span></p>
+    </footer>
+  </div>
   <script src="scripts/date.js"></script>
   <script src="scripts/main.js"></script>
 
