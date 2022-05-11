@@ -24,11 +24,24 @@ footer {
   background-color: #eee;
 }
 
+header {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
 h1 {
   color: navy;
 }
 
+header img {
+  width: 200px;
+  height: auto;
+}
+
 main img {
+  width: 100%;
+  height: auto;
   box-shadow: 0 0 30px #777;
 }
 
@@ -70,6 +83,22 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+table {
+  border: 1px solid #000;
+}
+
+th {
+  background-color: #000;
+  color: #fff;
+}
+
+th,
+td {
+  border: 1px solid #000;
+  padding: 0.5rem;
+  text-align: center;
 }
 
 /* Class Selectors */

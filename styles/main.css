@@ -1,12 +1,11 @@
-/* HTML Selectors */
+body {
+  font-family: 'Kalam', cursive;
+}
+
 article {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-body {
-  font-family: 'Kalam', cursive;
 }
 
 div {

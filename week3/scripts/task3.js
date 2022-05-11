@@ -73,6 +73,12 @@ const numbers = [];
 for (let i = 1; i <= 25; i++) {
   numbers.push(i);
 }
+const numbers2 = [];
+let i = 1;
+while (i <= 25) {
+  numbers2.push(i);
+  i++;
+}
 // console.log(numbers);
 
 
