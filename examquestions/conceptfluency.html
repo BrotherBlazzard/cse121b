@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>CSE 121b: Exam Question Testing</title>
+</head>
+
+<body>
+  <h1>CSE 121b: Exam Question Testing</h1>
+  <section>
+    <h2>Map - Domains</h2>
+    <script>
+      let domains = ["ibm", "microsoft", "apple", "amazon"];
+      let domainNames = domains.map(domain => domain = `${domain}.com`);
+      console.log(domainNames);
+    </script>
+    Check the console.
+  </section>
+  <section>
+    <h2>Filter - countries</h2>
+    <script>
+      let countries = ["Sadia Arabia", "Sudan", "India", "Australia", "Mexico"];
+      let longCountryNames = countries.filter(country => country.length > 9);
+      console.log(longCountryNames);
+    </script>
+    Check the console.
+  </section>
+  <section>
+    <h2>Switch - Operators.</h2>
+    <label for="operator">Select your the arithmetic operation: </label>
+    <select id="operator">
+      <option value="+">Addition ➕</option>
+      <option value="-">Subtraction ➖</option>
+      <option value="*">Multiply ❌</option>
+      <option value="/">Divide ➗</option>
+    </select>
+    <script>
+      const operator = document.querySelector('#operator');
+      operator.addEventListener('change', function () {
+        let a = 4;
+        let b = 15;
+        let op = operator.value;
+        let answer = -1;
+        switch (op) {
+          case "+":
+            answer = a + b;
+            break;
+          case "-":
+            answer = a - b;
+            break;
+          case "*":
+            answer = a * b;
+            break;
+          case "/":
+            answer = a / b;
+            break;
+        }
+        console.log(answer);
+      });
+    </script>
+    Check the console.
+  </section>
+  <script>
+    <h2>Code Comments - Multi-Line.</h2>
+    /* Input
+       Be sure to check the values of the screen and data source! */
+  </script>
+</body>
+
+</html>

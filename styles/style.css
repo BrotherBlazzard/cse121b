@@ -101,6 +101,16 @@ td {
   text-align: center;
 }
 
+input,
+select,
+textarea {
+  padding: 0.5rem;
+}
+
+footer {
+  text-align: center;
+}
+
 /* Class Selectors */
 .active {
   background-color: white;
