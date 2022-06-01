@@ -12,8 +12,12 @@
     <h2>Map - Domains</h2>
     <script>
       let domains = ["ibm", "microsoft", "apple", "amazon"];
-      let domainNames = domains.map(domain => domain = `${domain}.com`);
-      console.log(domainNames);
+      let d1 = domains.map(domain => `${domain}.com`);
+      let d2 = domains.map(domain => domain = `${domain}.com`);
+      const d3 = domains.map(x => x + ".com");
+      console.log(d1);
+      console.log(d2);
+      console.log(d3);
     </script>
     Check the console.
   </section>
@@ -61,8 +65,9 @@
     </script>
     Check the console.
   </section>
+  <h2>Code Comments - Multi-Line.</h2>
   <script>
-    <h2>Code Comments - Multi-Line.</h2>
+
     /* Input
        Be sure to check the values of the screen and data source! */
   </script>
