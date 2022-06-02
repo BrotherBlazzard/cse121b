@@ -1,0 +1,24 @@
+header {
+  margin: auto;
+  text-align: center;
+  background-color: rgb(188, 0, 0);
+  padding: 10px;
+  font-size: 3rm;
+}
+
+main {
+  text-align: center;
+  margin: 10px 280px;
+  background-color: gray;
+}
+
+input,
+select,
+textarea,
+button {
+  padding: 0.5rem;
+}
+
+.search-bar {
+  font-size: 2rem;
+}

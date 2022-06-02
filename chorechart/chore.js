@@ -1,47 +1,7 @@
-// Date work section
 let d = new Date();
-let currentDay = d.getDay();
-let currentHour = d.getHours();
-let currentMinute = d.getMinutes();
-
-switch (currentDay) {
-  case 0:
-    day = 'Sunday';
-    break;
-  case 1:
-    day = 'Monday';
-    break;
-  case 2:
-    day = 'Tuesday';
-    break;
-  case 3:
-    day = 'Wednesday';
-    break;
-  case 4:
-    day = 'Thursday';
-    break;
-  case 5:
-    day = 'Friday';
-    break;
-  case 6:
-    day = 'Saturday';
-}
-if (currentHour > 12) {
-  currentHour = currentHour - 12;
-}
-if (currentMinute < 10) {
-  currentMinute = `0${currentMinute}`;
-}
-
-document.querySelector('#day').innerHTML = day;
-document.querySelector('#hours').innerHTML = currentHour;
-document.querySelector('#minutes').innerHTML = currentMinute;
-
-
 const choreWeek = document.querySelector('#choreList');
-
-//Chorelists
-let Chorelists = {
+const personFilter = document.querySelector('#sortBy');
+let choreList = {
   bathrooms: [
     'sinks',
     'mirrors',
@@ -74,8 +34,6 @@ let Chorelists = {
   ],
 };
 
-//Chore Assignments
-
 const reset = () => {
   document.querySelector('#choreList').innerHTML = ' ';
 };
@@ -83,81 +41,71 @@ const reset = () => {
 const sortBy = () => {
   reset();
   let job = [];
+  const x = d.getDate();
   switch (document.querySelector('#sortBy').value) {
+
     case 'Meredith':
-      switch (d.getDate()) {
-        case 1, 2, 3, 4, 5, 6, 7:
-          job = Chorelists.bathrooms;
+      switch (x) {
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+        case 7:
+          job = choreList.bathrooms;
           break;
-        case 8, 9, 10, 11, 12, 13, 14:
-          job = Chorelists.firstFloor;
+        case 8:
+        case 9:
+        case 10:
+        case 11:
+        case 12:
+        case 13:
+        case 14:
+          job = choreList.firstFloor;
           break;
-        case 15, 16, 17, 18, 19, 20, 21:
-          job = Chorelists.kitchenLaundry;
+        case 15:
+        case 16:
+        case 17:
+        case 18:
+        case 19:
+        case 20:
+        case 21:
+          job = choreList.kitchenLaundry;
           break;
-        case 22, 23, 24, 25, 26, 27, 28, 29, 30, 31:
-          job = Chorelists.basementFloor;
-          break;
-      }
-      break;
-    case 'g':
-      switch (d.getDate()) {
-        case d > 0 && d <= 7:
-          job = 'firstFloor';
-          break;
-        case d >= 8 && d <= 14:
-          job = "kitchenLaundry";
-          break;
-        case d >= 15 && d <= 21:
-          job = "basementFloor";
-          break;
-        case d >= 22 && d <= 31:
-          job = "bathrooms";
-          break;
-      }
-      break;
-    case 'g':
-      switch (d.getDate()) {
-        case d > 0 && d <= 7:
-          job = 'kitchenLaundry';
-          break;
-        case d >= 8 && d <= 14:
-          job = "basemetnFloor";
-          break;
-        case d >= 15 && d <= 21:
-          job = "bathrooms";
-          break;
-        case d >= 22 && d <= 31:
-          job = "firstFloor";
-          break;
-      }
-      break;
-    case 'g':
-      switch (d.getDate()) {
-        case d > 0 && d <= 7:
-          job = 'bathrooms';
-          break;
-        case d >= 8 && d <= 14:
-          job = "firstFloor";
-          break;
-        case d >= 15 && d <= 21:
-          job = "kitchenLaundry";
-          break;
-        case d >= 22 && d <= 31:
-          job = "basementFloor";
+        case 22:
+        case 23:
+        case 24:
+        case 25:
+        case 26:
+        case 27:
+        case 28:
+        case 29:
+        case 30:
+        case 31:
+          job = choreList.basementFloor;
           break;
       }
       break;
 
+    case 'Genevieve':
+      if (x > 0 && x <= 7) {
+        job = choreList.firstFloor;
+      } else if (x > 7 && x <= 14) {
+        job = choreList.kitchenLaundry;
+      } else if (x > 14 && x <= 21) {
+        job = choreList.basementFloor;
+      } else {
+        job = choreList.bathrooms;
+      }
+      break;
   }
   buildJobList(job);
 };
 
-
-
-
 function buildJobList(job) {
-  document.querySelector('#name').innerHTML = document.querySelector('#sortBy').value;
+  document.querySelector('#name').innerHTML =
+    document.querySelector('#sortBy').value;
 
   job.forEach((chore) => {
     li = document.createElement('li');
@@ -166,5 +114,4 @@ function buildJobList(job) {
   });
 }
 
-
-document.querySelector('#sortBy').addEventListener('change', sortBy);
+personFilter.addEventListener('change', sortBy);

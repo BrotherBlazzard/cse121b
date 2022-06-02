@@ -35,10 +35,11 @@ ul {
 }
 
 .greenbox {
-  margin: 1rem;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  padding: 0.5rem;
   background-color: #bed;
+}
+
+.redbox {
+  background-color: lightpink;
 }
 
 input,
