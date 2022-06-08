@@ -15,9 +15,12 @@
       let d1 = domains.map(domain => `${domain}.com`);
       let d2 = domains.map(domain => domain = `${domain}.com`);
       const d3 = domains.map(x => x + ".com");
+      const d4 = domains.map(function (domain) { return `${domain}.com` });
       console.log(d1);
-      console.log(d2);
-      console.log(d3);
+      console.log({ d2 });
+      console.log({ d3 });
+      console.log({ d4 });
+
     </script>
     Check the console.
   </section>
@@ -26,7 +29,9 @@
     <script>
       let countries = ["Sadia Arabia", "Sudan", "India", "Australia", "Mexico"];
       let longCountryNames = countries.filter(country => country.length > 9);
+      let longCountryNames2 = countries.every().length > 9;
       console.log(longCountryNames);
+      console.log(longCountryNames2);
     </script>
     Check the console.
   </section>

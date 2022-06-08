@@ -1,11 +1,15 @@
 async function getComic(URL) {
-  let data = await fetch(URL);
-  console.log(data);
-  if (data.ok) {
-    //let data = await response.json();
-    //console.log(data);
+  let res = await fetch(URL, {
+    headers: {
+      'Accept': 'application.json'
+    },
+    mode: 'no-cors'
+  });
+  if (res.ok) {
+    let data = await res.json();
+    console.log(data);
   } else {
-    console.log(ERROR.statusText);
+    console.log("issues");
   }
 }
 
