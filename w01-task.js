@@ -1,4 +1,5 @@
 // 🔍 Part 1 error
+let rumple = "stiltskin";
 let userName = "Moroni";
 console.log(`Username: ${userName}`);
 userName = "Moronihah";
