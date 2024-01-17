@@ -22,3 +22,5 @@ function total(...theNumbers) {
 	}
 	return sum
 }
+
+document.querySelector("#lastMod").textContent = document.lastModified;
