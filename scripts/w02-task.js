@@ -11,8 +11,8 @@ const profilePicture = "images/blazzard.png";
 /* Step 3 - Element Variables */
 
 
-const foodElement = document.querySelector('#food');
-const yearElement = document.querySelector("#year");
+const foodElement = document.querySelector('#block');
+const yearElement = document.querySelector('#year');
 const imageElement = document.querySelector('img');
 
 
